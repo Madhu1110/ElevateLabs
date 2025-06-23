@@ -45,3 +45,4 @@ for col in numerical_cols:
     lower = Q1 - 1.5 * IQR
     upper = Q3 + 1.5 * IQR
     df = df[(df[col] >= lower) & (df[col] <= upper)]
+print("final output after outlier removal",df.shape)
