@@ -19,7 +19,7 @@ df['Embarked'].fillna(df['Embarked'].mode()[0] , inplace = True)
 df.drop(['Cabin'],axis = 1, inplace = True)
 print(df.isnull().sum())
 
-# car=tegorical data into numerical data
+# categorical data into numerical data
 label_encoder = LabelEncoder()
 df['Sex'] = label_encoder.fit_transform(df['Sex'])
 df['Embarked'] = label_encoder.fit_transform(df['Embarked'])
