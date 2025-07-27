@@ -8,7 +8,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 nlp = spacy.load("en_core_web_sm")  # assumes installed
 pdf_path = "C:/Users/madhu/OneDrive/Documents/ElevateLabs/resume ranker/sample resume/Resume1.pdf"
 
-# ---------- Utils ----------
 def extract_text_from_pdf(pdf_path):
     text = ""
     with fitz.open(pdf_path) as doc:
@@ -29,7 +28,7 @@ def rank_resumes(jd, resumes):
     ranked = sorted(enumerate(scores), key=lambda x: x[1], reverse=True)
     return ranked
 
-# ---------- Flask ----------
+# Flask app
 app = Flask(__name__)
 UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
