@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>Ranking Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Resume Match Scores</h1>
+    <table>
+        <tr><th>Rank</th><th>Resume</th><th>Match %</th></tr>
+        {% for name, score in results %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>{{ name }}</td>
+            <td>{{ score }}%</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">&#8592; Back to Upload</a>
+</div>
+</body>
+</html>
