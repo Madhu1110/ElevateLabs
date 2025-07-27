@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+    <title>Resume Ranker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>AI-Powered Resume Ranker</h1>
+    <form method="post" enctype="multipart/form-data">
+        <label>Job Description:</label>
+        <textarea name="job_description" rows="8" required></textarea>
+        <label>Upload Resumes (PDF):</label>
+        <input type="file" name="resumes" accept=".pdf" multiple required>
+        <button type="submit">Rank Resumes</button>
+    </form>
+</div>
+</body>
+</html>
