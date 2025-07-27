@@ -6,7 +6,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 nlp = spacy.load("en_core_web_sm")  # assumes installed
-pdf_path = "C:/Users/madhu/OneDrive/Documents/ElevateLabs/resume ranker/sample resume/Mohan Varikuti.pdf"
+pdf_path = "C:/Users/madhu/OneDrive/Documents/ElevateLabs/resume ranker/sample resume/Resume1.pdf"
 
 # ---------- Utils ----------
 def extract_text_from_pdf(pdf_path):
